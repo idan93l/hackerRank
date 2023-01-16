@@ -14,14 +14,14 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
       }
     }
     if(orangesLength !== i+2) {
-      const position = oranges[i] + a;
+      const position = oranges[i] + b;
       if(position >= s && position <= t) {
         orangesCounter++;
       }
     }
   }
 
-  return(1,2);
+  return (applesCounter, orangesCounter)
 }
 
 console.log(countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]));
