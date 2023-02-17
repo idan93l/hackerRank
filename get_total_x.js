@@ -1,4 +1,7 @@
 function getTotalX(a, b) {
-  // Write your code here
+  const all = a.join(b);
+  console.log(all);
 
 }
+
+getTotalX([2,4], [16, 32, 96])
