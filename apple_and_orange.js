@@ -1,22 +1,16 @@
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
-  let applesCounter = 0;
-  let orangesCounter = 0;
-
+  let appleCount = 0;
+  let orangeCount = 0;
   for (let i = 0; i < apples.length; i++) {
-    const position = apples[i] + a;
-    if (position >= s && position <= t) {
-      applesCounter++;
-    }
+      if (a + apples[i] >= s && a + apples[i] <= t) {
+          appleCount++;
+      }
   }
-
-  for (let i = 0; i < oranges.length; i++) {
-    const position = oranges[i] + b;
-    if (position >= s && position <= t) {
-      orangesCounter++;
-    }
+  for (let j = 0; j < oranges.length; j++) {
+      if (b + oranges[j] <= t && b + oranges[j] >= s) {
+          orangeCount++;
+      }
   }
-
-  console.log(orangesCounter + "\n" + applesCounter);
+  console.log(appleCount);
+  console.log(orangeCount);
 }
-
-console.log(countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]));
